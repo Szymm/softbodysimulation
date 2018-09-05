@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\source\main.cpp" />
+    <ClCompile Include="..\source\glad.c" />
+    <ClCompile Include="..\source\Physics.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Physics">
+      <UniqueIdentifier>{c59bc9e0-adf7-4d6f-b754-e3970fb48c3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render">
+      <UniqueIdentifier>{dbc63176-7ab3-4b08-bc28-f99f87e43a0a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\source\Render\Shader.h">
+      <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\Physics.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

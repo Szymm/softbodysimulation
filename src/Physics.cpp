@@ -86,14 +86,12 @@ void CPhysicsSystem::Update()
 	double dt = mCurrentTime - mPrevTime;
 	mPrevTime = mCurrentTime;
 	int i = 0;
-	std::cout << "\n====";
 	for (mpIt = mMassPoints.begin(); mpIt != mMassPoints.end(); ++mpIt, ++i)
 	{
 		if (!(*mpIt)->anchor)
 		{
 			EulerIntegration(dt, *mpIt);
 			mMassPointPositions[i] = (*mpIt)->pos;
-			std::cout << "\nP" << " (" << (*mpIt)->pos.x << "," << (*mpIt)->pos.y << "," << (*mpIt)->pos.z;
 		}
 	}
 }

@@ -28,7 +28,7 @@ public:
 
 	std::vector<glm::vec3>& GetMassPointPositions() { return mMassPointPositions; }
 
-	void Update();
+	void Update(float dt);
 
 private:
 	void EulerIntegration(float dt, SMassPoint *mp);
@@ -39,7 +39,4 @@ private:
 	std::vector<SMassPoint*> mMassPoints;
 	std::vector<SSpring*> mSprings;
 	std::vector<glm::vec3> mMassPointPositions;
-
-	double mPrevTime;
-	double mCurrentTime;
 };

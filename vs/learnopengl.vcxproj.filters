@@ -2,23 +2,23 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="..\src\Physics.cpp" />
-    <ClCompile Include="..\src\gl\CGLFWWindow.cpp">
-      <Filter>gl</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\main.cpp" />
     <ClCompile Include="..\src\glad.c" />
+    <ClCompile Include="..\src\gl\GLFWWindow.cpp">
+      <Filter>gl</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\include\CCamera.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\include\CGLFWWindow.h">
-      <Filter>include</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\include\Shader.h">
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="..\src\include\Physics.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\Camera.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\include\GLFWWindow.h">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>

@@ -8,8 +8,6 @@ const glm::vec3 GRAVITY_F(0.0f, -9.81, 0.0f);
 // -------------------------------------------------------------------------------------------
 CPhysicsSystem::CPhysicsSystem()
 {
-	mCurrentTime = glfwGetTime();
-	mPrevTime = mCurrentTime;
 }
 
 // -------------------------------------------------------------------------------------------
@@ -54,7 +52,7 @@ void CPhysicsSystem::CreateRope(float segmentLength, int segmentCount)
 }
 
 // -------------------------------------------------------------------------------------------
-void CPhysicsSystem::Update()
+void CPhysicsSystem::Update(float dt)
 {
 	std::vector<SMassPoint*>::iterator mpIt;
 	std::vector<SSpring*>::iterator sIt;
@@ -82,9 +80,6 @@ void CPhysicsSystem::Update()
 	}
 
 	// update movement
-	mCurrentTime = glfwGetTime();
-	double dt = mCurrentTime - mPrevTime;
-	mPrevTime = mCurrentTime;
 	int i = 0;
 	for (mpIt = mMassPoints.begin(); mpIt != mMassPoints.end(); ++mpIt, ++i)
 	{

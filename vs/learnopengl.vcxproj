@@ -139,13 +139,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\src\glad.c" />
-    <ClCompile Include="..\src\gl\CGLFWWindow.cpp" />
+    <ClCompile Include="..\src\gl\GLFWWindow.cpp" />
     <ClCompile Include="..\src\main.cpp" />
     <ClCompile Include="..\src\Physics.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\include\CCamera.h" />
-    <ClInclude Include="..\src\include\CGLFWWindow.h" />
+    <ClInclude Include="..\src\include\Camera.h" />
+    <ClInclude Include="..\src\include\GLFWWindow.h" />
     <ClInclude Include="..\src\include\Physics.h" />
     <ClInclude Include="..\src\include\Shader.h" />
   </ItemGroup>

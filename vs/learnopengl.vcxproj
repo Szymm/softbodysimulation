@@ -78,11 +78,11 @@
     <LibraryPath>..\libs\glfw\Release;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>..\source\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <IncludePath>..\src\include;..\src\include\external;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
     <LibraryPath>..\libs\glfw\Debug;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>..\source\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <IncludePath>..\src\include;..\src\include\external;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
     <LibraryPath>..\libs\glfw\Release;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -138,13 +138,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\source\glad.c" />
-    <ClCompile Include="..\source\main.cpp" />
-    <ClCompile Include="..\source\Physics.cpp" />
+    <ClCompile Include="..\src\glad.c" />
+    <ClCompile Include="..\src\gl\CGLFWWindow.cpp" />
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\Physics.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\source\Physics.h" />
-    <ClInclude Include="..\source\Render\Shader.h" />
+    <ClInclude Include="..\src\include\CCamera.h" />
+    <ClInclude Include="..\src\include\CGLFWWindow.h" />
+    <ClInclude Include="..\src\include\Physics.h" />
+    <ClInclude Include="..\src\include\Shader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

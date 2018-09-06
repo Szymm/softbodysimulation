@@ -4,6 +4,7 @@
 #include <CGLFWWindow.h>
 #include <Shader.h>
 #include <Physics.h>
+#include <CCamera.h>
 
 #include <iostream>
 
@@ -17,6 +18,8 @@ int main()
 	{
 		return -1;
 	}
+
+	Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
 
 	// Rope
 	//g_physics.CreateRope(0.02f, 10);
